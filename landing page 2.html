@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <style>
+            body{
+                width: 100%;
+                height:100vh;
+                background-color:var(--secondary--color);
+            }
+            nav{
+                width:84%;
+                display:flex;
+                justify-content: space-between;
+            }
+            img{
+                width:100px;
+                height:120px;
+                margin: 30px;
+            }
+            ul{
+               
+            }
+            nav ul li{
+                
+                display:inline-block;
+                margin: 20px 30px;
+                font-size: 30px;
+                color:var(--primary--color);
+
+               
+            }
+            li a{
+                text-decoration: none;
+                color:var(--primary--color);
+            }
+            a:hover{
+                color:purple;
+            }
+            h1{
+                font-size: 70px;
+                margin-left: 30px;
+                color:var(--primary--color);
+            }
+            span{
+                color:blueviolet;
+                transition:1s;
+            }
+            span:hover{
+                color:transparent;
+
+            }
+            p{
+                font-size: 19px;
+                margin-left: 30px;
+                margin-top: -30px;
+                color:var(--primary--color);
+            }
+            .name a{
+                margin-left:30px;
+                font-size: 25px;
+                display: block;
+                background-color:var(--secondary--color);
+                color:var(--primary--color);
+                width:180px;
+                height:40px;
+                text-align: center;
+                border-radius: 20px;
+                text-decoration: none;
+                border:1px solid var(--primary--color);
+
+            }
+            .name a:hover{
+                color:purple;
+            }
+            .images{
+               
+               
+                width:400px;
+                height:70px;
+                position: absolute;
+                right:0px;
+                top:115px;
+            }
+            .img1{
+                position:absolute;
+                width:300px;
+                height:70vh;
+                transform:bottom 1s;
+                
+
+            }
+            .img2{
+                position:absolute;
+                width:100px;
+                height:40vh;
+                left:25%;
+                margin-top: 55px;
+
+               
+                border-radius: 70%;
+                transform:left 1s;
+            }
+            .images:hover .img1{
+               
+            }
+           
+            .images:hover .img2{
+            top: 120px;
+
+            }
+            
+           body video{
+                position:absolute;
+                z-index: -1;
+            }
+            @media(min-aspect-ratio: 16/9){
+                .video1{
+                    width:100%;
+                    height: auto;
+                }
+            }
+            @media(max-aspect-ratio: 16/9){
+                .video1{
+                    width:100%;
+                    height: auto;
+                }
+            }
+            :root{
+                --primary--color:white;
+                --secondary--color:black;
+
+            }
+            .darkmode{
+                --primary--color:black;
+                --secondary--color:white;
+            }
+            #moon{
+                width:30px;
+                height:30px;
+                margin-top: 40px;
+                
+            }
+            #preloader{
+                width:100%;
+                height:100%;
+                background-color:white url("https://media.tenor.com/H6Fj3BZa3zoAAAAi/loader.gif") no-repeat center center;
+                background-size: 30%;
+                z-index: 100;
+            }
+            
+            
+
+        </style>
+    </head>
+    
+    <body>
+        <div id="preloader">
+        <div class="container">
+            
+
+            <nav>
+                <img src="https://tse4.mm.bing.net/th?id=OIP.x7hTVlPP8g_PcDCgHovTSgHaJy&pid=Api&P=0&h=180">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">portfolio</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">Hire me</a></li>
+            </ul>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_512767.png" onclick="darkfunc()" id="moon" >
+            </nav>
+            <div class="name">
+                <h1>I'm <span>yaswanth</span>chowdary</h1>
+                <p>This is my portfolio website i have provided  all my details ,talents and strengths</p>
+                <a href="">Download CV</a>
+            </div>
+            <div class="images">
+                <img src="https://d3jbhadj57dczt.cloudfront.net/preview-447316-BRW59wdmRIx9Oa6c-large.JPG" class="img1">
+                <img src="" class="img2">
+            </div>
+            
+        </div>
+        <script>
+            var moon=document.getElementsById("moon");
+            var preloader=document.getElementById("preloader");
+            window.addEventListener("load",()=>{
+                preloader.style.display="none"
+
+            })
+            function darkfunc(){
+                
+                document.body.classList.toggle("darkmode");
+                if(document.body.classList.contains("darkmode")){
+                   
+                    moon.src="http://cdn.onlinewebfonts.com/svg/img_512767.png" ;
+                    
+                    
+
+
+
+                }
+                else{
+
+                                       
+                    moon.src="http://cdn.onlinewebfonts.com/svg/img_512767.png";
+                    
+
+                }
+
+            }
+
+        </script>
+    </body>
+</html>
